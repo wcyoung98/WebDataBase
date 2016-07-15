@@ -1,0 +1,86 @@
+@CHARSET "UTF-8";
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #C4E4CD;
+}
+
+#wrap {
+	width: 100%;
+	height: 100%;
+	margin-top: 20px;
+}
+
+/* database 이름(로고)설정 */
+.head-line {
+	padding-left: 60px;
+}
+.head-line > a {
+	color: #555;
+	text-decoration: none;
+}
+.head-line > a:hover {
+	text-decoration: underline;
+}
+
+/* table list 설정 */
+.db_show {
+	margin-left: 40px;
+	border-collapse: collapse;
+}
+.db_show th,
+.db_show td {
+	padding: 10px;
+	border: 1px solid #FFF;
+}
+
+/* 실행열에 버튼 */
+.link-button {
+	color: #555;
+	font-size: 12px;
+	padding: 3px 6px;
+	border-radius: 2px;
+	background-color: #E6E6E6;
+	border: 1px solid #989898;
+	text-decoration: none;
+}
+
+/* 텍스트 오른쪽 정렬 */
+.text_right {
+	text-align: right;
+}
+
+/* 텍스트 가운데 정렬 */
+.text-center {
+	text-align: center;
+}
+
+/* 버튼위치 설정 */
+.submitButton {
+	float: right;
+}
+
+/* 체크박스 가르키는 이미지 설정 */
+.checkbox_choice > img {
+	margin-top: 10px;
+	margin-left: 50px;
+}
+
+/* create_form 설정 */
+.table_create {
+	color: #555;
+	margin: 20px 40px;
+}
+.table_create > fieldset {
+	border: 1px solid #FFF;
+}
+
+/* 직접 Query작성 textarea 설정 */
+#sqlQuery {
+	width: 100%;
+	height: 100%;
+	resize: none;
+	overflow: visible;
+}
