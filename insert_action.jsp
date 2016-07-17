@@ -57,7 +57,7 @@
 		e.printStackTrace();
 %>
 	<script type="text/javascript">
-	alert("입력하신 값이 오류를 발생시켰습니다.\n다시 확인해주세요.");
+	alert("입력하신 값이 오류를 발생시켰습니다.\n다시 확인해주세요.\nauto_increment는 0을 입력해주세요.");
 	</script>
 <%
 	}

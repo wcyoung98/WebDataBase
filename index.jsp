@@ -91,10 +91,10 @@
 		<form name="query_form" class="table_create" action="queryRun.jsp">
 			<fieldset>
 				<legend>직접 Query작성하기</legend>
-				<textarea name="query" id="sqlQuery" rows="10" cols="100"></textarea>
+				<textarea name="query" class="sqlQuery" rows="10" cols="100"></textarea>
 				</fieldset>
 				<fieldset>
-				<input type="button" value="실행" class="submitButton" onclick="querySubmit()">
+					<input type="button" value="실행" class="submitButton" onclick="querySubmit()">
 				</fieldset>
 		</form>
 	</div>

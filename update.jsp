@@ -57,7 +57,6 @@
 				if(x != (column.length-1)) selectQuery.append(", ");
 			}
 			selectQuery.append(" FROM ").append(table_name).append(" LIMIT ").append(i).append(", 1");
-			%><br><%=selectQuery%><br><%
 			selectPstmt = con.prepareStatement(selectQuery.toString());
 			rs = selectPstmt.executeQuery();
 			if(rs.next()){
@@ -69,7 +68,6 @@
 				}
 			}
 			query.append(" LIMIT 1");
-			%><br><%=query%><br><%
 			pstmt = con.prepareStatement(query.toString());
 			pstmt.executeUpdate();
 			rs.close();
@@ -96,9 +94,9 @@
 <%
 	}
 %>
-	<!-- <script type="text/javascript">
+	<script type="text/javascript">
 	var url = document.referrer;
 	location.href=url;
-	</script> -->
+	</script>
 </body>
 </html>

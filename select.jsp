@@ -11,7 +11,6 @@
 </head>
 <body>
 <% 
-
 	String table_name = request.getParameter("name"); //테이블명 파라미터
 
 	//데이터베이스 연결 변수
