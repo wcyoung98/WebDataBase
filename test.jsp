@@ -1,9 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Insert title here</title>
 	<script type="text/javascript">
 	function test(){
@@ -23,11 +24,31 @@
 	<table border="1">
 		<tr>
 			<td><input type="checkbox" name="check" onclick="test()"></td>
-			<td><input type="text" name="text" id="text" value="cddd" style="display:none">
-			<span id="span">cddd</span></td>
-			<td><input type="number"></td>
+			<td><input type="text" name="text" id="text" value="abcd" style="display:none">
+			<span id="span">abcd</span></td>
 		</tr>
 	</table>
 	</form>
+<%
+	String url = "jdbc:mysql://localhost:3306/";
+	String db = "WebdataBase";
+	String id = "root";
+	String pw = "apmsetup";
+
+	Connection con = null;
+
+	try {
+		Class.forName("com.mysql.jdbc.Driver");
+		con = DriverManager.getConnection(url+db, id, pw);
+		String query = "desc test";
+		PreparedStatement pstmt = con.prepareStatement(query);
+		ResultSet rs = pstmt.executeQuery();
+		while(rs.next()){
+			%><br><%=rs.getString("field") %><br><%
+		}
+	} catch(Exception e){
+		e.printStackTrace();
+	}
+%>
 </body>
 </html>

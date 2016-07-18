@@ -54,7 +54,7 @@
 		}
 %>
 			<tr>
-				<td colspan="5" class="text-center">필드 총 <%= i %>개</td>
+				<td colspan="5">필드 총 <%= i %>개</td>
 			</tr>
 <%
 		rs.close();

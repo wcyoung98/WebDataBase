@@ -55,8 +55,8 @@ function createSubmit(){
  */
 function querySubmit(){
 	var form = document.query_form;
-	var str = form.query.value.split(" ");
-	if(str[0].toUpperCase() == "SELECT"){
+	var query = form.query.value.split(" ");
+	if(query[0].toUpperCase() == "SELECT"){
 		form.action = "selectQueryRun.jsp";
 		form.submit();
 		return;
@@ -118,13 +118,13 @@ function insertSubmit(){
 	if(form.value.length > 1){
 		for(var i = 0; i < form.value.length; i++){
 			if(form.value[i].value == ""){
-				alert((i+1)+"번 째 필드의 값을 입력해주세요.\nauto_increment는 0을 입력해주세요.");
+				alert((i+1)+"번 째 필드의 값을 입력해주세요.");
 				return;
 			}
 		}
 	} else {
 		if(form.value.value == ""){
-			alert("값을 입력해주세요.\nauto_increment는 0을 입력해주세요.");
+			alert("값을 입력해주세요.");
 			return;
 		}
 	}

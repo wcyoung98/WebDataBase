@@ -60,6 +60,12 @@
 				<tr>
 					<td colspan="4"><input type="button" value="삽입" class="submitButton" onclick="insertSubmit()"></td>
 				</tr>
+				<tr>
+					<td colspan="4">
+					<p>Auto_Increment는 추후의 수정하겠습니다.</p>
+					<p>일단 Auto_Increment는 0을 입력해주세요.</p>
+					</td>
+				</tr>
 			</table>
 		</form>
 	</div>

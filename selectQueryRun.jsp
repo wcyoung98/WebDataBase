@@ -11,6 +11,14 @@
 <body>
 <%
 	String query = request.getParameter("query"); //Query 파라미터
+	String[] queryArray = query.split(" ");
+	
+	for(int i = 0; i < queryArray.length; i++){
+		%><%=i%>,<%=queryArray[i]%><br><%
+	}
+	if(queryArray[1].equals("*")){
+		%>아니 왜 *을 쓰는 거야 귀찮게<%
+	}
 	
 	//데이터베이스 연결 변수
 	String url = "jdbc:mysql://localhost:3306/";
@@ -23,7 +31,9 @@
 		<h3 class="head-line">table_name</h3>
 		<form name="selectForm">
 			<table class="db_show">
+			<%= query %>
 				<tr>
+					<th></th>
 					<th></th>
 <%
 	Connection con = null;
@@ -35,7 +45,6 @@
 		PreparedStatement pstmt = con.prepareStatement(query);
 		ResultSet rs = pstmt.executeQuery();
 		while(rs.next()){
-			
 		}
 	} catch(Exception e){
 		e.printStackTrace();

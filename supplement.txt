@@ -1,8 +1,6 @@
 INDEX
  - 탭별로 SELECT, INSERT, UPDATE, CREATE 등의 탭을 만들어서 그것에 맞게 결과가 반출되도록
- - SELECT, SHOW, DESCRIBE       INSERT, UPDATE, CREATE, DROP, ALTER
- - 하드쿼리 했을 때 여러 쿼리가 입력되게 만들기
- - VIEW 만들기
+ -* SELECT, SHOW, DESCRIBE		INSERT, UPDATE, CREATE, DROP, ALTER
  - TABLE LIST 밑에 VIEW LIST 만들기
  - VIEW 생성 만들기
  - (VIEW 수정)
@@ -36,6 +34,12 @@ DISCRIBE
   - my.ini파일의 [mysqld]에 있는 skip-innodb를 지우고 default_storage_engine=InnoDB로 수정
   - 테이블 엔진 변경 : ALTER TABLE '테이블이름' ENGINE=INNODB;
   - 뒤로가기, backspace 막기
+  - desc도 먹으니 길게 썼던 Query, desc로 변경하기
+  - javascript, jQuery로 수정하기
+  
+  
+  
+  -- 추후에는 cafe24호스팅이 아닌 로컬 데이터베이스도 관리 가능하게 GRANT, REVOKE 등도 수행가능하게
   
 SUCCESS(추가기능제외, 소스수정들만)
  - SELECT.jsp
@@ -48,8 +52,9 @@ SUCCESS(추가기능제외, 소스수정들만)
  - describe.jsp
  - table_delete.jsp
  - table_drop.jsp
- 
+
 
  - index.jsp
  - queryRun.jsp
+ - selectQueryRun.jsp
  

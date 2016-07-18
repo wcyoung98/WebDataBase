@@ -52,11 +52,6 @@ html, body {
 	text-align: right;
 }
 
-/* 텍스트 가운데 정렬 */
-.text-center {
-	text-align: center;
-}
-
 /* 버튼위치 설정 */
 .submitButton {
 	float: right;
