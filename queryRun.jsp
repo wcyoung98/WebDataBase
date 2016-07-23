@@ -1,27 +1,27 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Insert title here</title>
 </head>
 <body style="background-color: #C4E4CD;">
 <%
-	String query = request.getParameter("query"); //Query ÆÄ¶ó¹ÌÅÍ
+	String query = request.getParameter("query"); //Query íŒŒë¼ë¯¸í„°
 
-	//µ¥ÀÌÅÍº£ÀÌ½º ¿¬°á º¯¼ö
+	//ë°ì´í„°ë² ì´ìŠ¤ ì—°ê²° ë³€ìˆ˜
 	String url = "jdbc:mysql://localhost:3306/";
 	String db = "WebDataBase";
 	String id = "root";
 	String pw = "apmsetup";
 
-	String[] splitQuery = query.split(";"); //Query¸¦ ';'´ÜÀ§·Î Àß¶ó¼­ ¹è¿­¿¡ ÀúÀå
+	String[] splitQuery = query.split(";"); //Queryë¥¼ ';'ë‹¨ìœ„ë¡œ ìž˜ë¼ì„œ ë°°ì—´ì— ì €ìž¥
 	
 	Connection con = null;
 	
-	//µ¥ÀÌÅÍº£ÀÌ½º ¿¬°á
+	//ë°ì´í„°ë² ì´ìŠ¤ ì—°ê²°
 	try {
 		Class.forName("com.mysql.jdbc.Driver");
 		con = DriverManager.getConnection(url+db, id, pw);
@@ -46,7 +46,7 @@
 		e.printStackTrace();
 %>
 	<script type="text/javascript">
-	alert("ÀÔ·ÂÇÏ½Å Query°¡ ¿À·ù¸¦ ¹ß»ý½ÃÄ×½À´Ï´Ù.\n´Ù½Ã È®ÀÎÇØÁÖ¼¼¿ä.");
+	alert("ìž…ë ¥í•˜ì‹  Queryê°€ ì˜¤ë¥˜ë¥¼ ë°œìƒì‹œì¼°ìŠµë‹ˆë‹¤.\në‹¤ì‹œ í™•ì¸í•´ì£¼ì„¸ìš”.");
 	</script>		
 <%
 	}

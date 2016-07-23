@@ -40,12 +40,15 @@
 	try {
 		Class.forName("com.mysql.jdbc.Driver");
 		con = DriverManager.getConnection(url+db, id, pw);
-		String query = "desc test";
+		String query = "DESC test";
 		PreparedStatement pstmt = con.prepareStatement(query);
 		ResultSet rs = pstmt.executeQuery();
 		while(rs.next()){
 			%><br><%=rs.getString("field") %><br><%
 		}
+		rs.close();
+		pstmt.close();
+		con.close();
 	} catch(Exception e){
 		e.printStackTrace();
 	}

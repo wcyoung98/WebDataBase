@@ -51,7 +51,6 @@
 			pstmt.close();
 			query.setLength(0);
 		}
-		
 		con.commit();
 		con.setAutoCommit(true);
 		con.close();

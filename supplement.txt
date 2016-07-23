@@ -36,8 +36,6 @@ DISCRIBE
   - 뒤로가기, backspace 막기
   - javascript -> jQuery로 수정하기
   
-  
-  
   -- 추후에는 cafe24호스팅이 아닌 로컬 데이터베이스도 관리 가능하게 GRANT, REVOKE 등도 수행가능하게
   
 SUCCESS(추가기능제외, 소스수정들만)
@@ -51,8 +49,7 @@ SUCCESS(추가기능제외, 소스수정들만)
  - describe.jsp
  - table_delete.jsp
  - table_drop.jsp
-
+ - queryRun.jsp
 
  - index.jsp
- - queryRun.jsp
  - selectQueryRun.jsp

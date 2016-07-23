@@ -20,7 +20,7 @@
 	String pw = "apmsetup";
 
 	//컬럼명 출력 Query 변수
-	String loopQuery = "SELECT column_name FROM information_schema.columns WHERE table_name = '"+table_name+"'";
+	String loopQuery = "DESC "+table_name;
 	
 	int colCount = 0; //컬럼의 개수 변수
 	
@@ -43,7 +43,7 @@
 		PreparedStatement pstmt = con.prepareStatement(loopQuery);
 		ResultSet rs = pstmt.executeQuery();
 		while(rs.next()){
-			column.add(rs.getString("column_name")); //ArrayList에 컬럼명 저장
+			column.add(rs.getString("Field")); //ArrayList에 컬럼명 저장
 %>
 					<th><%= column.get(colCount) %></th>
 <%
@@ -105,6 +105,12 @@
 	con.close();
 	} catch(Exception e){
 		e.printStackTrace();
+%>
+	<script type="text/javascript">
+	alert("오류가 발생했습니다.");
+	location.href="index.jsp";
+	</script>
+<%
 	}
 %>
 			</table>

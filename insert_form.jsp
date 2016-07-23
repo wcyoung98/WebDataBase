@@ -27,7 +27,7 @@
 				<tr>
 					<th>필드명</th>
 					<th>타입</th>
-					<th>Auto_Increment</th>
+					<th>Extra</th>
 					<th>값</th>
 				</tr>
 <%
@@ -37,15 +37,15 @@
 	try {
 		Class.forName("com.mysql.jdbc.Driver");
 		con = DriverManager.getConnection(url+db, id, pw);
-		String query = "SELECT column_name, column_type, extra FROM information_schema.columns WHERE table_schema = schema() AND table_name = '"+table_name+"'";
+		String query = "DESC "+table_name;
 		PreparedStatement pstmt = con.prepareStatement(query);
 		ResultSet rs = pstmt.executeQuery();
 		while(rs.next()){
 %>
 				<tr>
-					<td><%= rs.getString("column_name") %></td>
-					<td><%= rs.getString("column_type") %></td>
-					<td><%= rs.getString("extra") %></td>
+					<td><%= rs.getString("Field") %></td>
+					<td><%= rs.getString("Type") %></td>
+					<td><%= rs.getString("Extra") %></td>
 					<td><input type="text" name="value"></td>
 				</tr>
 <%

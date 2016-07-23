@@ -56,12 +56,19 @@ function createSubmit(){
 function querySubmit(){
 	var form = document.query_form;
 	var query = form.query.value.split(" ");
-	if(query[1] == "*"){
-		alert("\'*\' 속성은 위 테이블 목록의 실행[보기] 버튼을 이용해주세요.\n");
-		return;
-	}
+
 	if(query[0].toUpperCase() == "SELECT"){
 		form.action = "selectQueryRun.jsp";
+		form.submit();
+		return;
+	}
+	if(query[0].toUpperCase() == "SHOW"){
+		form.action = "showQueryRun.jsp";
+		form.submit();
+		return;
+	}
+	if(query[0].toUpperCase() == "DESC" || query[0].toUpperCase() == "DESCRIBE"){
+		form.action = "descQueryRun.jsp";
 		form.submit();
 		return;
 	}
