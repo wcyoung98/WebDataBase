@@ -1,6 +1,5 @@
 INDEX
- - 탭별로 SELECT, INSERT, UPDATE, CREATE 등의 탭을 만들어서 그것에 맞게 결과가 반출되도록
- -* SELECT, SHOW, DESCRIBE		INSERT, UPDATE, CREATE, DROP, ALTER
+ -* SELECT Query 실행 되도록
  - TABLE LIST 밑에 VIEW LIST 만들기
  - VIEW 생성 만들기
  - (VIEW 수정)
@@ -21,8 +20,11 @@ INSERT_FORM
 DISCRIBE
  - 컬럼추가, 컬럼삭제 기능
  
+ 
+ 
+ 
 ****************************
- - INSERT나 UPDATE 등, 값을 넣었을 때 오류가 발생하면 alert 출력(가능하면 어디가 틀렸는지도)
+ - 테이블 생성 길이 직접입력, select 추가하기
  - 외래키로 연결된 테이블 생성가능하게 만들기
  - 외래키로 연결된 테이블 만들 때 ON UPDATE CASCADE 등의 옵션 추가
 
